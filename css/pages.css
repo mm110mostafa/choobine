@@ -217,10 +217,74 @@
 .social-cards h4 { font-size: 16px; margin-bottom: 14px; }
 .social-cards .socials { flex-wrap: wrap; }
 
+/* ---------- Blog grid (magazine page) ---------- */
+.blog-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(330px, 1fr)); gap: 26px; }
+.blog-grid .blog-card { opacity: 1; transform: none; animation: cardIn .6s var(--ease) both; }
+.blog-grid .blog-card.hide { display: none; }
+.blog-grid .blog-card h3 { font-size: 18px; line-height: 1.7; }
+.blog-grid .blog-card p { min-height: 64px; }
+.blog-grid .blog-card:hover h3 { color: var(--primary); }
+.blog-grid .blog-card .card-link { margin-top: 12px; }
+
+/* ---------- Services page ---------- */
+.services-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(310px, 1fr)); gap: 24px; }
+.process { position: relative; display: grid; grid-template-columns: repeat(5, 1fr); gap: 18px; }
+.process::before {
+  content: ""; position: absolute; top: 36px; right: 12%; left: 12%; height: 2px;
+  background: repeating-linear-gradient(90deg, var(--primary) 0 10px, transparent 10px 22px); opacity: .45;
+}
+.process-step {
+  position: relative; text-align: center; background: var(--card); border: 1px solid var(--border);
+  border-radius: var(--radius); padding: 26px 18px 22px;
+  transition: transform .45s var(--ease), box-shadow .45s var(--ease);
+}
+.process-step:hover { transform: translateY(-8px); box-shadow: var(--shadow); }
+.step-num {
+  position: relative; z-index: 2; width: 72px; height: 72px; margin: 0 auto 18px; border-radius: 50%;
+  display: grid; place-items: center; font-size: 24px; font-weight: 900; color: #fff;
+  background: linear-gradient(135deg, #E09257, var(--primary-dark));
+  box-shadow: 0 14px 26px -12px var(--primary), 0 0 0 8px var(--bg);
+}
+.process-step h3 { font-size: 17px; margin-bottom: 6px; }
+.process-step p { font-size: 13.5px; color: var(--muted); }
+
+/* ---------- Story page ---------- */
+.story-timeline { position: relative; padding-right: 44px; }
+.story-timeline::before {
+  content: ""; position: absolute; top: 12px; bottom: 12px; right: 13px; width: 2px;
+  background: linear-gradient(180deg, var(--primary), var(--primary-10));
+}
+.timeline-item { position: relative; padding-bottom: 38px; }
+.timeline-item:last-child { padding-bottom: 0; }
+.timeline-item::before {
+  content: ""; position: absolute; top: 8px; right: -38px; width: 16px; height: 16px;
+  border-radius: 50%; background: var(--primary); border: 3px solid var(--bg);
+  box-shadow: 0 0 0 4px var(--primary-30);
+}
+.timeline-year { font-size: 20px; font-weight: 900; color: var(--primary); line-height: 1.4; }
+.timeline-item h3 { font-size: 18px; margin: 2px 0 4px; }
+.timeline-item p { font-size: 14.5px; color: var(--muted); }
+.signature-quote {
+  background: var(--card); border: 1px solid var(--border); border-radius: var(--radius);
+  padding: 30px 32px; position: relative; box-shadow: var(--shadow);
+}
+.signature-quote .quote-mark { font-size: 46px; color: var(--primary-30); line-height: 1; }
+.signature-quote p { font-size: 17px; font-weight: 600; margin: 8px 0 16px; }
+.signature-quote .sig-name { font-weight: 900; }
+.signature-quote .sig-role { font-size: 13px; color: var(--muted); }
+
+/* ---------- FAQ page ---------- */
+.faq-wrap { max-width: 880px; margin-inline: auto; }
+.faq-group-title { display: flex; align-items: center; gap: 12px; font-size: 20px; font-weight: 900; margin: 42px 0 18px; }
+.faq-group-title i { width: 42px; height: 42px; border-radius: 14px; display: grid; place-items: center; background: var(--primary-10); color: var(--primary); font-size: 17px; }
+.faq-group-title:first-child { margin-top: 0; }
+
 /* ---------- Responsive ---------- */
 @media (max-width: 980px) {
   .contact-layout { grid-template-columns: 1fr; }
   .page-hero { padding: 190px 0 90px; }
+  .process { grid-template-columns: repeat(2, 1fr); }
+  .process::before { display: none; }
 }
 @media (max-width: 640px) {
   .page-hero { padding: 160px 0 70px; background-attachment: scroll; clip-path: polygon(0 0, 100% 0, 100% 95%, 0 100%); }
@@ -233,4 +297,7 @@
   .lb-nav { width: 42px; height: 42px; font-size: 15px; }
   .lb-prev { right: 8px; }
   .lb-next { left: 8px; }
+  .process { grid-template-columns: 1fr; }
+  .blog-grid { grid-template-columns: 1fr; }
+  .signature-quote { padding: 24px 20px; }
 }

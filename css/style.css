@@ -166,6 +166,22 @@ li:hover > .nav-link .caret { transform: rotate(180deg); }
 .drawer-list a { display: flex; align-items: center; gap: 12px; padding: 13px 14px; border-radius: 14px; font-weight: 500; }
 .drawer-list a i { color: var(--primary); width: 20px; }
 .drawer-list a:hover { background: var(--primary-10); }
+
+/* Drawer submenu (accordion) */
+.drawer-has-sub > .drawer-sub-toggle {
+  width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 12px;
+  padding: 13px 14px; border-radius: 14px; font-weight: 500; text-align: right;
+}
+.drawer-sub-toggle > span { display: flex; align-items: center; gap: 12px; flex: 1; }
+.drawer-sub-toggle > span i { color: var(--primary); width: 20px; }
+.drawer-sub-toggle .caret { font-size: 12px; color: var(--muted); transition: transform .4s var(--ease); }
+.drawer-has-sub.open > .drawer-sub-toggle { background: var(--primary-10); color: var(--primary); }
+.drawer-has-sub.open > .drawer-sub-toggle .caret { transform: rotate(180deg); color: var(--primary); }
+.drawer-sub { max-height: 0; overflow: hidden; transition: max-height .5s var(--ease); }
+.drawer-has-sub.open > .drawer-sub { max-height: 640px; }
+.drawer-sub li a { display: flex; align-items: center; gap: 10px; padding: 9px 12px 9px 10px; border-radius: 12px; font-size: 13.5px; color: var(--muted); }
+.drawer-sub li a i { width: 18px; font-size: 12px; }
+.drawer-sub li a:hover { background: var(--primary-10); color: var(--primary); }
 #drawer-overlay { position: fixed; inset: 0; background: rgba(0,0,0,.5); backdrop-filter: blur(3px); z-index: 1100; opacity: 0; visibility: hidden; transition: all .4s; }
 #drawer-overlay.show { opacity: 1; visibility: visible; }
 

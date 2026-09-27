@@ -15,10 +15,17 @@
 - **نظرات مشتریان** (اسلایدر)، **سوالات متداول** (آکاردئون نارنجی مثل مرجع) با **مکعب چوبی سه‌بعدی CSS** به‌جای Q فلزی.
 - **افتخارات** + **مارکی لوگو همکاران**، **مقالات** با کاروسل مرکزی (مثل مرجع)، فرم تماس، فوتر.
 - حالت تاریک/روشن، نوار پیشرفت اسکرول، دکمه بازگشت به بالا با حلقه پیشرفت، پیش‌لودر، انیمیشن‌های ورود AOS.
+- **صفحات داخلی** (`services`, `projects`, `blog`, `story`, `faq`, `contact`) با هیرو اختصاصی، شمارنده‌های انیمیشن، کرامب، **سبد خرید مشترک** از طریق `localStorage` و **زیرمنوی آکاردئونی** در کشوی موبایل.
 
 ## 📍 مسیرها
 - `index.html` — صفحه اصلی؛ بخش‌ها: `#hero-section`, `#services-section`, `#products-section`, `#about-section`, `#projects-section`, `#video-section`, `#testimonials-section`, `#faq-section`, `#honors-section`, `#blog-section`, `#contact-section`
-- `css/style.css`، `js/hero3d.js` (صحنه سه‌بعدی)، `js/main.js` (تعاملات)
+- `pages/services.html` — خدمات (کارت خدمات + مراحل ۵ مرحله‌ای + چرا چوبینه + CTA)
+- `pages/projects.html` — نمونه‌کارها (گالوری + لایت‌باکس + فیلتر)
+- `pages/blog.html` — مجله (گرید مقالات با فیلتر دسته‌بندی + خبرنامه + CTA)
+- `pages/story.html` — داستان چوبینه (تایم‌لاین + ارزش‌ها + افتخارات + امضا)
+- `pages/faq.html` — سوالات متداول (۳ دسته‌بندی آکاردئونی + جعبه تماس)
+- `pages/contact.html` — تماس با ما (فرم کامل + اطلاعات + نقشه)
+- `css/style.css`، `css/pages.css` (استایل صفحات داخلی)، `js/hero3d.js` (صحنه سه‌بعدی)، `js/main.js` (تعاملات صفحه اصلی)، `js/pages.js` (تعاملات صفحات داخلی)
 
 ## 🗄 داده‌ها
 - جدول `contact_requests` (name, phone, source) — فرم تماس با `POST tables/contact_requests` ذخیره می‌شود.

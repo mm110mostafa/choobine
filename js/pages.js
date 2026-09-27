@@ -58,7 +58,7 @@
 
   /* ---------- Mobile drawer ---------- */
   const drawer = $('#mobile-drawer'), overlay = $('#drawer-overlay');
-  $$('.drawer-list li').forEach((li, i) => li.style.setProperty('--i', i));
+  $$('.drawer-list > li').forEach((li, i) => li.style.setProperty('--i', i));
   function toggleDrawer(open) {
     drawer.classList.toggle('open', open);
     overlay.classList.toggle('show', open);
@@ -69,6 +69,33 @@
   overlay.addEventListener('click', () => toggleDrawer(false));
   $$('#mobile-drawer a').forEach((a) => a.addEventListener('click', () => toggleDrawer(false)));
   document.addEventListener('keydown', (e) => { if (e.key === 'Escape') toggleDrawer(false); });
+
+  /* Drawer submenu accordion */
+  $$('.drawer-sub-toggle').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const li = btn.closest('.drawer-has-sub');
+      const isOpen = li.classList.toggle('open');
+      btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+  });
+
+  /* ---------- Cart (shared with homepage via localStorage) ---------- */
+  const cartCount = $('#cart-count');
+  let cart = +(localStorage.getItem('choob_cart') || 0);
+  if (cartCount) cartCount.textContent = faDigits(cart);
+  const cartBtn = $('#cart-button');
+  if (cartBtn) {
+    cartBtn.addEventListener('click', () => toast(cart ? faDigits(cart) + ' کالا در سبد خرید شماست' : 'سبد خرید شما خالی است'));
+  }
+
+  /* ---------- Header search (redirect to homepage products) ---------- */
+  const searchForm = $('.header-search');
+  if (searchForm) {
+    searchForm.addEventListener('submit', () => {
+      const q = $('#header-search-input').value.trim();
+      if (q) window.location.href = '../index.html#products-section';
+    });
+  }
 
   /* ---------- Animated counters (page stats) ---------- */
   function animateCount(el) {
@@ -135,10 +162,31 @@
       sendForm(quickForm, {
         name: $('#contact-name').value.trim(),
         phone: $('#contact-phone').value.trim(),
-        subject: 'درخواست مشاوره از صفحه نمونه‌کارها',
-        source: 'projects-page'
+        subject: quickForm.dataset.subject || 'درخواست مشاوره',
+        source: quickForm.dataset.source || 'inner-page'
       });
     });
+  }
+  const newsForm = $('#newsletter-form');
+  if (newsForm) {
+    newsForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      toast('ایمیل شما در خبرنامه ثبت شد؛ منتظر مقالات بعدی باشید 🌿');
+      newsForm.reset();
+    });
+  }
+
+  /* ---------- Blog grid filter ---------- */
+  const blogGrid = $('#blog-grid');
+  if (blogGrid) {
+    $$('.filter-btn').forEach((b) => b.addEventListener('click', () => {
+      $$('.filter-btn').forEach((x) => x.classList.remove('active'));
+      b.classList.add('active');
+      const f = b.dataset.cat;
+      $$('.blog-card', blogGrid).forEach((c) => {
+        c.classList.toggle('hide', f !== 'all' && c.dataset.cat !== f);
+      });
+    }));
   }
 
   /* ---------- Libraries ---------- */

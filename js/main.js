@@ -68,7 +68,7 @@
 
   /* ---------- Mobile drawer ---------- */
   const drawer = $('#mobile-drawer'), overlay = $('#drawer-overlay');
-  $$('.drawer-list li').forEach((li, i) => li.style.setProperty('--i', i));
+  $$('.drawer-list > li').forEach((li, i) => li.style.setProperty('--i', i));
   function toggleDrawer(open) {
     drawer.classList.toggle('open', open);
     overlay.classList.toggle('show', open);
@@ -78,6 +78,15 @@
   $('#drawer-close').addEventListener('click', () => toggleDrawer(false));
   overlay.addEventListener('click', () => toggleDrawer(false));
   $$('#mobile-drawer a').forEach((a) => a.addEventListener('click', () => toggleDrawer(false)));
+
+  /* Drawer submenu accordion */
+  $$('.drawer-sub-toggle').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const li = btn.closest('.drawer-has-sub');
+      const isOpen = li.classList.toggle('open');
+      btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+  });
 
   /* ---------- Typed words in hero ---------- */
   const words = ['هدیه دهید', 'بیاورید', 'ماندگار کنید'];

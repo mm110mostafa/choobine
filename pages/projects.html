@@ -37,6 +37,9 @@
 
       <div class="header-actions">
         <button class="icon-btn" id="theme-toggle" aria-label="تغییر حالت تاریک/روشن"><i class="fa-solid fa-moon"></i></button>
+        <button class="icon-btn" id="cart-button" aria-label="سبد خرید">
+          <i class="fa-solid fa-bag-shopping"></i><span class="cart-count" id="cart-count">۰</span>
+        </button>
         <a href="contact.html" class="btn btn-primary btn-login"><i class="fa-regular fa-user"></i><span>ورود / ثبت نام</span></a>
         <button class="icon-btn menu-toggle" id="menu-toggle" aria-label="باز کردن منو"><i class="fa-solid fa-bars-staggered"></i></button>
       </div>
@@ -78,17 +81,17 @@
             </div>
           </div>
         </li>
-        <li><a href="../index.html#services-section" class="nav-link"><i class="fa-solid fa-hammer"></i> خدمات</a></li>
+        <li><a href="services.html" class="nav-link"><i class="fa-solid fa-hammer"></i> خدمات</a></li>
         <li><a href="projects.html" class="nav-link active"><i class="fa-solid fa-couch"></i> نمونه‌کارها</a></li>
         <li class="has-drop">
-          <a href="../index.html#about-section" class="nav-link">درباره ما <i class="fa-solid fa-chevron-down caret"></i></a>
+          <a href="story.html" class="nav-link">درباره ما <i class="fa-solid fa-chevron-down caret"></i></a>
           <ul class="dropdown">
-            <li><a href="../index.html#about-section">داستان چوبینه</a></li>
+            <li><a href="story.html">داستان چوبینه</a></li>
             <li><a href="../index.html#honors-section">افتخارات</a></li>
-            <li><a href="../index.html#faq-section">سوالات متداول</a></li>
+            <li><a href="faq.html">سوالات متداول</a></li>
           </ul>
         </li>
-        <li><a href="../index.html#blog-section" class="nav-link"><i class="fa-regular fa-newspaper"></i> مجله</a></li>
+        <li><a href="blog.html" class="nav-link"><i class="fa-regular fa-newspaper"></i> مجله</a></li>
         <li><a href="contact.html" class="nav-link"><i class="fa-solid fa-headset"></i> تماس با ما</a></li>
       </ul>
       <a href="tel:02112345678" class="nav-phone"><span>۰۲۱-۱۲۳۴۵۶۷۸</span><i class="fa-solid fa-phone-volume"></i></a>
@@ -103,12 +106,34 @@
     </div>
     <ul class="drawer-list">
       <li><a href="../index.html"><i class="fa-solid fa-house"></i> صفحه اصلی</a></li>
-      <li><a href="../index.html#products-section"><i class="fa-solid fa-grip"></i> محصولات</a></li>
-      <li><a href="../index.html#services-section"><i class="fa-solid fa-hammer"></i> خدمات</a></li>
+      <li class="drawer-has-sub">
+        <button class="drawer-sub-toggle" aria-expanded="false"><span><i class="fa-solid fa-grip"></i> محصولات</span><i class="fa-solid fa-chevron-down caret"></i></button>
+        <ul class="drawer-sub">
+          <li><a href="../index.html#products-section"><i class="fa-solid fa-clock"></i> ساعت دیواری چوبی</a></li>
+          <li><a href="../index.html#products-section"><i class="fa-regular fa-image"></i> تابلو و دیوارکوب</a></li>
+          <li><a href="../index.html#products-section"><i class="fa-solid fa-shapes"></i> شلف و طاقچه</a></li>
+          <li><a href="../index.html#products-section"><i class="fa-regular fa-square"></i> آینه قاب چوبی</a></li>
+          <li><a href="../index.html#products-section"><i class="fa-solid fa-utensils"></i> تخته سرو و برش</a></li>
+          <li><a href="../index.html#products-section"><i class="fa-solid fa-bowl-food"></i> کاسه و ظروف چوبی</a></li>
+          <li><a href="../index.html#products-section"><i class="fa-solid fa-spoon"></i> قاشق و کفگیر</a></li>
+          <li><a href="../index.html#products-section"><i class="fa-solid fa-tray"></i> سینی و استند</a></li>
+          <li><a href="../index.html#products-section"><i class="fa-solid fa-fire"></i> جاشمعی چوبی</a></li>
+          <li><a href="../index.html#products-section"><i class="fa-solid fa-chess-king"></i> مجسمه و تندیس</a></li>
+          <li><a href="../index.html#products-section"><i class="fa-solid fa-cube"></i> پایه و استند نمایش</a></li>
+          <li><a href="../index.html#products-section"><i class="fa-solid fa-gift"></i> هدایای سفارشی</a></li>
+        </ul>
+      </li>
+      <li><a href="services.html"><i class="fa-solid fa-hammer"></i> خدمات</a></li>
       <li><a href="projects.html"><i class="fa-solid fa-couch"></i> نمونه‌کارها</a></li>
-      <li><a href="../index.html#about-section"><i class="fa-solid fa-circle-info"></i> درباره ما</a></li>
-      <li><a href="../index.html#faq-section"><i class="fa-regular fa-circle-question"></i> سوالات متداول</a></li>
-      <li><a href="../index.html#blog-section"><i class="fa-regular fa-newspaper"></i> مجله</a></li>
+      <li class="drawer-has-sub">
+        <button class="drawer-sub-toggle" aria-expanded="false"><span><i class="fa-solid fa-circle-info"></i> درباره ما</span><i class="fa-solid fa-chevron-down caret"></i></button>
+        <ul class="drawer-sub">
+          <li><a href="story.html"><i class="fa-solid fa-book-open"></i> داستان چوبینه</a></li>
+          <li><a href="../index.html#honors-section"><i class="fa-solid fa-trophy"></i> افتخارات</a></li>
+          <li><a href="faq.html"><i class="fa-regular fa-circle-question"></i> سوالات متداول</a></li>
+        </ul>
+      </li>
+      <li><a href="blog.html"><i class="fa-regular fa-newspaper"></i> مجله</a></li>
       <li><a href="contact.html"><i class="fa-solid fa-headset"></i> تماس با ما</a></li>
     </ul>
     <a href="tel:02112345678" class="btn btn-primary btn-block"><i class="fa-solid fa-phone"></i> تماس با مشاور</a>
@@ -163,7 +188,7 @@
             <h2>پروژه بعدی، پروژه شماست؟</h2>
             <p>مشاوره و بازدید از کارگاه کاملاً رایگان است. کافیست شماره‌تان را ثبت کنید تا کارشناسان ما با شما تماس بگیرند.</p>
           </div>
-          <form class="contact-form" id="quick-form">
+          <form class="contact-form" id="quick-form" data-subject="درخواست مشاوره از صفحه نمونه‌کارها" data-source="projects-page">
             <input type="text" id="contact-name" placeholder="نام و نام خانوادگی" required>
             <input type="tel" id="contact-phone" placeholder="شماره موبایل" required pattern="[0-9۰-۹]{10,11}">
             <button type="submit" class="btn btn-light">درخواست مشاوره رایگان <span class="btn-arrow"><i class="fa-solid fa-paper-plane"></i></span></button>
@@ -189,7 +214,7 @@
       </div>
       <div>
         <h4>دسترسی سریع</h4>
-        <ul><li><a href="../index.html#products-section">محصولات</a></li><li><a href="../index.html#services-section">خدمات</a></li><li><a href="projects.html">نمونه‌کارها</a></li><li><a href="../index.html#blog-section">مجله</a></li></ul>
+        <ul><li><a href="../index.html#products-section">محصولات</a></li><li><a href="services.html">خدمات</a></li><li><a href="projects.html">نمونه‌کارها</a></li><li><a href="blog.html">مجله</a></li></ul>
       </div>
       <div>
         <h4>دسته‌بندی‌ها</h4>
