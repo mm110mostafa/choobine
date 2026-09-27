@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>چوبینه | لوازم دکوری و چوبی دست‌ساز</title>
+  <meta name="description" content="چوبینه؛ تولید و فروش لوازم دکوری و چوبی دست‌ساز، ساعت دیواری، ظروف چوبی، شلف و تابلوهای چوبی.">
+
+  <!-- Vazir font -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/rastikerdar/vazir-font@v30.1.0/dist/font-face.css">
+  <link rel="stylesheet" href="assets/fontawesome/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Preloader -->
+  <div id="preloader" aria-hidden="true">
+    <div class="preloader-ring"><span></span><i class="fa-solid fa-tree"></i></div>
+  </div>
+
+  <!-- Scroll progress -->
+  <div id="scroll-progress"></div>
+
+  <!-- ================= HEADER ================= -->
+  <header id="site-header">
+    <div class="container header-top">
+      <a href="#hero-section" class="site-logo" aria-label="چوبینه">
+        <span class="logo-mark"><i class="fa-solid fa-tree"></i></span>
+        <span class="logo-text"><strong>چوبینه</strong><small>Choobineh Decor</small></span>
+      </a>
+
+      <form class="header-search" role="search" onsubmit="return false;">
+        <input type="search" id="header-search-input" placeholder="جستجو در محصولات چوبی..." aria-label="جستجو">
+        <button type="submit" aria-label="جستجو"><i class="fa-solid fa-magnifying-glass"></i></button>
+      </form>
+
+      <div class="header-actions">
+        <button class="icon-btn" id="theme-toggle" aria-label="تغییر حالت تاریک/روشن"><i class="fa-solid fa-moon"></i></button>
+        <button class="icon-btn" id="cart-button" aria-label="سبد خرید">
+          <i class="fa-solid fa-bag-shopping"></i><span class="cart-count" id="cart-count">0</span>
+        </button>
+        <a href="#contact-section" class="btn btn-primary btn-login"><i class="fa-regular fa-user"></i><span>ورود / ثبت نام</span></a>
+        <button class="icon-btn menu-toggle" id="menu-toggle" aria-label="باز کردن منو"><i class="fa-solid fa-bars-staggered"></i></button>
+      </div>
+    </div>
+
+    <nav class="container main-nav" id="main-nav" aria-label="منوی اصلی">
+      <ul class="nav-list">
+        <li><a href="#hero-section" class="nav-link active"><i class="fa-solid fa-house"></i> صفحه اصلی</a></li>
+        <li class="has-mega">
+          <a href="#products-section" class="nav-link btn-megamenu"><i class="fa-solid fa-grip"></i> محصولات <i class="fa-solid fa-chevron-down caret"></i></a>
+          <div class="megamenu">
+            <div class="mega-cols">
+              <div class="mega-col">
+                <h4>دکوراسیون دیواری</h4>
+                <a href="#products-section">ساعت دیواری چوبی</a>
+                <a href="#products-section">تابلو و دیوارکوب</a>
+                <a href="#products-section">شلف و طاقچه</a>
+                <a href="#products-section">آینه قاب چوبی</a>
+              </div>
+              <div class="mega-col">
+                <h4>آشپزخانه و پذیرایی</h4>
+                <a href="#products-section">تخته سرو و برش</a>
+                <a href="#products-section">کاسه و ظروف چوبی</a>
+                <a href="#products-section">قاشق و کفگیر</a>
+                <a href="#products-section">سینی و استند</a>
+              </div>
+              <div class="mega-col">
+                <h4>اکسسوری دکوری</h4>
+                <a href="#products-section">جاشمعی چوبی</a>
+                <a href="#products-section">مجسمه و تندیس</a>
+                <a href="#products-section">پایه و استند نمایش</a>
+                <a href="#products-section">هدایای سفارشی</a>
+              </div>
+              <a href="#products-section" class="mega-banner" style="background-image:url('images/mega-banner.jpg')">
+                <span class="mega-banner-badge">تخفیف ۲۵٪</span>
+                <strong>کالکشن پاییزه</strong>
+                <small>مشاهده محصولات <i class="fa-solid fa-arrow-left"></i></small>
+              </a>
+            </div>
+          </div>
+        </li>
+        <li><a href="#services-section" class="nav-link"><i class="fa-solid fa-hammer"></i> خدمات</a></li>
+        <li><a href="pages/projects.html" class="nav-link"><i class="fa-solid fa-couch"></i> نمونه‌کارها</a></li>
+        <li class="has-drop">
+          <a href="#about-section" class="nav-link">درباره ما <i class="fa-solid fa-chevron-down caret"></i></a>
+          <ul class="dropdown">
+            <li><a href="#about-section">داستان چوبینه</a></li>
+            <li><a href="#honors-section">افتخارات</a></li>
+            <li><a href="#faq-section">سوالات متداول</a></li>
+          </ul>
+        </li>
+        <li><a href="#blog-section" class="nav-link"><i class="fa-regular fa-newspaper"></i> مجله</a></li>
+        <li><a href="pages/contact.html" class="nav-link"><i class="fa-solid fa-headset"></i> تماس با ما</a></li>
+      </ul>
+      <a href="tel:02112345678" class="nav-phone"><span>۰۲۱-۱۲۳۴۵۶۷۸</span><i class="fa-solid fa-phone-volume"></i></a>
+    </nav>
+  </header>
+
+  <!-- Mobile drawer -->
+  <aside id="mobile-drawer" aria-label="منوی موبایل">
+    <div class="drawer-head">
+      <a href="#hero-section" class="site-logo"><span class="logo-mark"><i class="fa-solid fa-tree"></i></span><span class="logo-text"><strong>چوبینه</strong></span></a>
+      <button class="icon-btn" id="drawer-close" aria-label="بستن منو"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <ul class="drawer-list">
+      <li><a href="#hero-section"><i class="fa-solid fa-house"></i> صفحه اصلی</a></li>
+      <li><a href="#products-section"><i class="fa-solid fa-grip"></i> محصولات</a></li>
+      <li><a href="#services-section"><i class="fa-solid fa-hammer"></i> خدمات</a></li>
+      <li><a href="pages/projects.html"><i class="fa-solid fa-couch"></i> نمونه‌کارها</a></li>
+      <li><a href="#about-section"><i class="fa-solid fa-circle-info"></i> درباره ما</a></li>
+      <li><a href="#faq-section"><i class="fa-regular fa-circle-question"></i> سوالات متداول</a></li>
+      <li><a href="#blog-section"><i class="fa-regular fa-newspaper"></i> مجله</a></li>
+      <li><a href="pages/contact.html"><i class="fa-solid fa-headset"></i> تماس با ما</a></li>
+    </ul>
+    <a href="tel:02112345678" class="btn btn-primary btn-block"><i class="fa-solid fa-phone"></i> تماس با مشاور</a>
+  </aside>
+  <div id="drawer-overlay"></div>
+
+  <main>
+    <!-- ================= HERO ================= -->
+    <section id="hero-section">
+      <canvas id="hero-canvas" aria-hidden="true"></canvas>
+      <div class="hero-grain"></div>
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <span class="hero-kicker" data-aos="fade-down">Handmade Wooden Decor</span>
+          <h1 class="hero-title" data-aos="fade-up" data-aos-delay="100">
+            گرمای <span class="text-outline">چوب طبیعی</span><br>
+            را به خانه‌تان <span class="typed-word" id="typed-word">هدیه دهید</span>
+          </h1>
+          <p class="hero-desc" data-aos="fade-up" data-aos-delay="200">
+            طراحی و ساخت دست‌ساز لوازم دکوری چوبی از گردو، راش و بلوط؛ هر قطعه یک اثر هنری منحصربه‌فرد است که با عشق و دقت در کارگاه چوبینه ساخته می‌شود.
+          </p>
+          <div class="hero-cta" data-aos="fade-up" data-aos-delay="300">
+            <a href="#products-section" class="btn btn-light">مشاهده محصولات <span class="btn-arrow"><i class="fa-solid fa-arrow-left"></i></span></a>
+            <div class="avatar-stack">
+              <img src="images/avatar-12.jpg" alt="مشتری">
+              <img src="images/avatar-32.jpg" alt="مشتری">
+              <img src="images/avatar-47.jpg" alt="مشتری">
+              <img src="images/avatar-5.jpg" alt="مشتری">
+              <span class="avatar-more">+۲k</span>
+              <p><strong>۲,۴۰۰+</strong> مشتری راضی</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual" data-aos="zoom-in" data-aos-delay="200">
+          <div class="hero-frame" data-tilt data-tilt-max="12" data-tilt-glare data-tilt-max-glare="0.25">
+            <img src="images/hero-main.jpg" alt="دکوراسیون داخلی با چوب طبیعی">
+            <div class="float-card float-card-1">
+              <i class="fa-solid fa-leaf"></i>
+              <div><strong>۱۰۰٪ طبیعی</strong><small>چوب گردو و راش</small></div>
+            </div>
+            <div class="float-card float-card-2">
+              <i class="fa-solid fa-star"></i>
+              <div><strong>۴.۹ از ۵</strong><small>رضایت مشتریان</small></div>
+            </div>
+          </div>
+          <div class="hero-orbit"><span></span><span></span><span></span></div>
+        </div>
+      </div>
+      <a href="#counter-strip" class="scroll-down" aria-label="اسکرول به پایین"><span></span></a>
+      <div class="hero-shape"></div>
+    </section>
+
+    <!-- ================= COUNTERS ================= -->
+    <section id="counter-strip" class="container">
+      <div class="counter-strip-inner" data-aos="fade-up">
+        <div class="counter-item"><span class="counter-num"><b class="plus">+</b><b data-count="36">0</b></span><span class="counter-label">استاد کار<br>مجرب</span></div>
+        <div class="counter-item"><span class="counter-num"><b class="plus">+</b><b data-count="480">0</b></span><span class="counter-label">طرح<br>منحصربه‌فرد</span></div>
+        <div class="counter-item"><span class="counter-num"><b class="plus">+</b><b data-count="243">0</b></span><span class="counter-label">پروژه دکوراسیون<br>انجام شده</span></div>
+        <div class="counter-item"><span class="counter-num"><b class="plus">+</b><b data-count="15">0</b></span><span class="counter-label">سال<br>تجربه</span></div>
+      </div>
+    </section>
+
+    <!-- ================= SERVICES ================= -->
+    <section id="services-section" class="section">
+      <div class="container">
+        <div class="section-head" data-aos="fade-up">
+          <span class="section-en">Our Services</span>
+          <h2 class="section-title">خدمات ما</h2>
+          <p class="section-sub">از طراحی تا ساخت و نصب؛ همه‌چیز برای یک فضای گرم و چوبی</p>
+        </div>
+
+        <div class="services-grid">
+          <article class="service-card" data-aos="fade-up" data-tilt data-tilt-max="8" data-tilt-scale="1.02">
+            <div class="service-icon"><i class="fa-solid fa-pen-ruler"></i></div>
+            <h3>طراحی سفارشی</h3>
+            <p>طراحی سه‌بعدی قطعات دکوری متناسب با سبک و ابعاد فضای شما، پیش از شروع ساخت.</p>
+            <a href="#contact-section" class="card-link">ثبت سفارش <i class="fa-solid fa-arrow-left"></i></a>
+            <span class="card-number">01</span>
+          </article>
+          <article class="service-card" data-aos="fade-up" data-aos-delay="100" data-tilt data-tilt-max="8" data-tilt-scale="1.02">
+            <div class="service-icon"><i class="fa-solid fa-hammer"></i></div>
+            <h3>ساخت دست‌ساز</h3>
+            <p>ساخت با دست و ابزار سنتی توسط استادکاران ماهر؛ با کیفیتی ماندگار برای نسل‌ها.</p>
+            <a href="#contact-section" class="card-link">بیشتر بدانید <i class="fa-solid fa-arrow-left"></i></a>
+            <span class="card-number">02</span>
+          </article>
+          <article class="service-card" data-aos="fade-up" data-aos-delay="200" data-tilt data-tilt-max="8" data-tilt-scale="1.02">
+            <div class="service-icon"><i class="fa-solid fa-fire-flame-curved"></i></div>
+            <h3>حکاکی و لیزر</h3>
+            <p>حکاکی نام، لوگو و طرح دلخواه روی چوب؛ مناسب هدایای سازمانی و شخصی.</p>
+            <a href="#contact-section" class="card-link">بیشتر بدانید <i class="fa-solid fa-arrow-left"></i></a>
+            <span class="card-number">03</span>
+          </article>
+          <article class="service-card" data-aos="fade-up" data-aos-delay="300" data-tilt data-tilt-max="8" data-tilt-scale="1.02">
+            <div class="service-icon"><i class="fa-solid fa-truck-fast"></i></div>
+            <h3>ارسال و نصب</h3>
+            <p>بسته‌بندی ایمن و ارسال به سراسر ایران، همراه با نصب رایگان در تهران.</p>
+            <a href="#contact-section" class="card-link">بیشتر بدانید <i class="fa-solid fa-arrow-left"></i></a>
+            <span class="card-number">04</span>
+          </article>
+        </div>
+
+        <div class="call-banner" data-aos="fade-up">
+          <div class="call-banner-info">
+            <span class="call-icon"><i class="fa-solid fa-phone-volume"></i></span>
+            <div>
+              <small>مشاوره رایگان انتخاب محصول</small>
+              <a href="tel:02112345678"><strong>۰۲۱-۱۲۳۴۵۶۷۸</strong></a>
+            </div>
+          </div>
+          <a href="#contact-section" class="btn btn-primary">شروع گفتگو و ارتباط با ما <span class="btn-arrow"><i class="fa-solid fa-arrow-left"></i></span></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= PRODUCTS ================= -->
+    <section id="products-section" class="section section-alt">
+      <div class="container">
+        <div class="section-head section-head-row" data-aos="fade-up">
+          <div>
+            <span class="section-en">Products</span>
+            <h2 class="section-title">محصولات پرفروش</h2>
+          </div>
+          <div class="product-filters" role="tablist">
+            <button class="filter-btn active" data-filter="all">همه</button>
+            <button class="filter-btn" data-filter="wall">دیواری</button>
+            <button class="filter-btn" data-filter="kitchen">آشپزخانه</button>
+            <button class="filter-btn" data-filter="accessory">اکسسوری</button>
+          </div>
+        </div>
+
+        <div class="swiper products-swiper" data-aos="fade-up">
+          <div class="swiper-wrapper" id="products-wrapper"></div>
+        </div>
+        <div class="swiper-nav">
+          <button class="swiper-btn products-next" aria-label="بعدی"><i class="fa-solid fa-arrow-right"></i></button>
+          <div class="products-pagination"></div>
+          <button class="swiper-btn products-prev" aria-label="قبلی"><i class="fa-solid fa-arrow-left"></i></button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= ABOUT ================= -->
+    <section id="about-section" class="section">
+      <div class="container about-grid">
+        <div class="about-visual" data-aos="fade-left">
+          <div class="about-img-main" data-tilt data-tilt-max="6">
+            <img src="images/about-main.jpg" alt="استادکار در حال ساخت محصول چوبی">
+          </div>
+          <div class="about-img-small">
+            <img src="images/about-small.jpg" alt="کنده‌کاری روی چوب">
+          </div>
+          <div class="about-badge">
+            <strong>۱۵</strong>
+            <span>سال تجربه<br>در صنعت چوب</span>
+          </div>
+        </div>
+
+        <div class="about-content" data-aos="fade-right">
+          <span class="section-en">About Us</span>
+          <h2 class="section-title">داستان <span class="accent">چوبینه</span></h2>
+          <p class="about-lead">ما باور داریم هر تکه چوب داستانی برای گفتن دارد.</p>
+          <p>چوبینه در سال ۱۳۸۹ با یک کارگاه کوچک نجاری شروع به کار کرد. امروز با تیمی از استادکاران، طراحان و هنرمندان، لوازم دکوری و چوبی را با تلفیق هنر سنتی ایرانی و طراحی مدرن تولید می‌کنیم. تمام چوب‌های مصرفی ما از منابع پایدار تهیه و با روغن‌های طبیعی و بدون مواد سمی پرداخت می‌شوند.</p>
+
+          <ul class="about-features">
+            <li><i class="fa-solid fa-circle-check"></i> چوب طبیعی و خشک‌شده در کوره</li>
+            <li><i class="fa-solid fa-circle-check"></i> پرداخت با روغن و موم طبیعی</li>
+            <li><i class="fa-solid fa-circle-check"></i> ۱۸ ماه ضمانت کیفیت</li>
+            <li><i class="fa-solid fa-circle-check"></i> امکان سفارش در ابعاد دلخواه</li>
+          </ul>
+
+          <div class="mini-counters">
+            <div><b>+<span data-count="16">0</span></b><small>شعبه و نمایندگی</small></div>
+            <div><b>+<span data-count="88">0</span></b><small>همکار تجاری</small></div>
+            <div><b>+<span data-count="108">0</span></b><small>پروژه هتل و کافه</small></div>
+          </div>
+
+          <div class="about-actions">
+            <a href="#contact-section" class="btn btn-primary">درخواست مشاوره <span class="btn-arrow"><i class="fa-solid fa-arrow-left"></i></span></a>
+            <a href="#projects-section" class="btn btn-dark">نمونه‌کارها <span class="btn-arrow"><i class="fa-solid fa-arrow-left"></i></span></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= PROJECTS ================= -->
+    <section id="projects-section" class="section section-dark">
+      <div class="container">
+        <div class="section-head" data-aos="fade-up">
+          <span class="section-en">Our Projects</span>
+          <h2 class="section-title">پروژه‌های ما</h2>
+          <p class="section-sub">نمونه‌ای از فضاهایی که با محصولات چوبینه جان گرفته‌اند</p>
+        </div>
+
+        <div class="projects-accordion" data-aos="fade-up">
+          <article class="project-panel active" style="background-image:url('images/project-1.jpg')">
+            <span class="project-num">01</span>
+            <div class="project-info"><h3>ویلای جنگلی نوشهر</h3><p>دیوارپوش، شلف‌ها و روشنایی چوبی سفارشی</p></div>
+          </article>
+          <article class="project-panel" style="background-image:url('images/project-2.jpg')">
+            <span class="project-num">02</span>
+            <div class="project-info"><h3>آپارتمان مدرن الهیه</h3><p>کابینت و اکسسوری‌های آشپزخانه از چوب بلوط</p></div>
+          </article>
+          <article class="project-panel" style="background-image:url('images/project-3.jpg')">
+            <span class="project-num">03</span>
+            <div class="project-info"><h3>هتل بوتیک کاشان</h3><p>تابلوهای کنده‌کاری و دکور لابی</p></div>
+          </article>
+          <article class="project-panel" style="background-image:url('images/project-4.jpg')">
+            <span class="project-num">04</span>
+            <div class="project-info"><h3>کافه رستوران چنار</h3><p>میز، صندلی و ظروف سرو چوبی</p></div>
+          </article>
+        </div>
+
+        <div class="projects-strip" data-aos="fade-up">
+          <div><b>+<span data-count="222">0</span></b><small>پروژه مسکونی</small></div>
+          <div><b>+<span data-count="16">0</span></b><small>استان کشور</small></div>
+          <div><b>+<span data-count="10">0</span></b><small>جایزه طراحی</small></div>
+          <div><b>+<span data-count="108">0</span></b><small>پروژه تجاری</small></div>
+          <div class="director-sign">
+            <img src="images/avatar-68.jpg" alt="مدیرعامل">
+            <div><strong>مهندس رضا چوبینه</strong><small>مدیرعامل و بنیان‌گذار</small><span class="signature">R.Choobineh</span></div>
+          </div>
+        </div>
+
+        <div style="text-align:center;margin-top:42px" data-aos="fade-up">
+          <a href="pages/projects.html" class="btn btn-light">مشاهده همه نمونه‌کارها <span class="btn-arrow"><i class="fa-solid fa-arrow-left"></i></span></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= VIDEO ================= -->
+    <section id="video-section" class="section">
+      <div class="container">
+        <div class="video-box" data-aos="zoom-in" style="background-image:url('images/video-poster.jpg')">
+          <div class="video-overlay"></div>
+          <button class="play-btn" id="play-btn" aria-label="پخش تور کارگاه"><i class="fa-solid fa-play"></i></button>
+          <div class="video-caption">
+            <span class="section-en">Workshop Tour</span>
+            <h2>سفری به دل کارگاه چوبینه</h2>
+            <p>ببینید چطور یک تنه درخت به اثری ماندگار تبدیل می‌شود</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= TESTIMONIALS ================= -->
+    <section id="testimonials-section" class="section section-alt">
+      <div class="container">
+        <div class="section-head" data-aos="fade-up">
+          <span class="section-en">Testimonials</span>
+          <h2 class="section-title">نظر مشتریان</h2>
+        </div>
+        <div class="swiper testimonials-swiper" data-aos="fade-up">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide testimonial-card">
+              <i class="fa-solid fa-quote-right quote"></i>
+              <p>ساعت دیواری گردو که سفارش دادم دقیقاً همان چیزی بود که می‌خواستم. کیفیت ساخت و بسته‌بندی عالی بود.</p>
+              <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+              <div class="t-user"><img src="images/avatar-45.jpg" alt=""><div><strong>سارا محمدی</strong><small>تهران</small></div></div>
+            </div>
+            <div class="swiper-slide testimonial-card">
+              <i class="fa-solid fa-quote-right quote"></i>
+              <p>دکور کافه‌مان را کامل به چوبینه سپردیم. مشتری‌ها مدام از فضای گرم و چوبی تعریف می‌کنند.</p>
+              <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+              <div class="t-user"><img src="images/avatar-15.jpg" alt=""><div><strong>امیر رضایی</strong><small>اصفهان</small></div></div>
+            </div>
+            <div class="swiper-slide testimonial-card">
+              <i class="fa-solid fa-quote-right quote"></i>
+              <p>تخته سرو با حکاکی اسم برای هدیه سفارش دادم؛ ظرافت کار فوق‌العاده بود و به‌موقع رسید.</p>
+              <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star-half-stroke"></i></div>
+              <div class="t-user"><img src="images/avatar-26.jpg" alt=""><div><strong>نگار احمدی</strong><small>شیراز</small></div></div>
+            </div>
+            <div class="swiper-slide testimonial-card">
+              <i class="fa-solid fa-quote-right quote"></i>
+              <p>شلف‌های چوبی بسیار محکم و زیبا هستند. نصب هم رایگان و خیلی تمیز انجام شد.</p>
+              <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+              <div class="t-user"><img src="images/avatar-59.jpg" alt=""><div><strong>محمد کریمی</strong><small>تهران</small></div></div>
+            </div>
+          </div>
+          <div class="testimonials-pagination"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= FAQ ================= -->
+    <section id="faq-section" class="section">
+      <div class="container faq-grid">
+        <div class="faq-content">
+          <div class="section-head section-head-start" data-aos="fade-up">
+            <span class="section-en">FAQ</span>
+            <h2 class="section-title">سوالات متداول</h2>
+          </div>
+          <div class="faq-list">
+            <div class="faq-item active" data-aos="fade-up">
+              <button class="faq-q"><span>برای سفارش محصول سفارشی چه مراحلی را باید طی کنم؟</span><i class="fa-solid fa-plus"></i></button>
+              <div class="faq-a"><p>کافی است از طریق فرم تماس یا تلفن با ما در ارتباط باشید. پس از دریافت ابعاد و سلیقه شما، طرح سه‌بعدی ارائه و پس از تأیید، ساخت آغاز می‌شود.</p></div>
+            </div>
+            <div class="faq-item" data-aos="fade-up" data-aos-delay="50">
+              <button class="faq-q"><span>از چه نوع چوب‌هایی استفاده می‌کنید؟</span><i class="fa-solid fa-plus"></i></button>
+              <div class="faq-a"><p>عمدتاً از چوب گردو، راش، بلوط، زیتون و افرا استفاده می‌کنیم که همگی در کوره خشک و ضد ترک می‌شوند.</p></div>
+            </div>
+            <div class="faq-item" data-aos="fade-up" data-aos-delay="100">
+              <button class="faq-q"><span>زمان ساخت و ارسال سفارش چقدر است؟</span><i class="fa-solid fa-plus"></i></button>
+              <div class="faq-a"><p>محصولات موجود ظرف ۲ تا ۴ روز کاری ارسال می‌شوند. سفارش‌های اختصاصی بسته به پیچیدگی بین ۷ تا ۲۰ روز زمان می‌برند.</p></div>
+            </div>
+            <div class="faq-item" data-aos="fade-up" data-aos-delay="150">
+              <button class="faq-q"><span>نگهداری از وسایل چوبی چگونه است؟</span><i class="fa-solid fa-plus"></i></button>
+              <div class="faq-a"><p>از قرار دادن در معرض نور مستقیم و رطوبت زیاد خودداری کنید و هر چند ماه یک‌بار با روغن مخصوص چوب پرداخت کنید.</p></div>
+            </div>
+            <div class="faq-item" data-aos="fade-up" data-aos-delay="200">
+              <button class="faq-q"><span>آیا محصولات ضمانت دارند؟</span><i class="fa-solid fa-plus"></i></button>
+              <div class="faq-a"><p>بله، تمامی محصولات دارای ۱۸ ماه ضمانت کیفیت ساخت و ۷ روز ضمانت بازگشت کالا هستند.</p></div>
+            </div>
+          </div>
+        </div>
+        <div class="faq-visual" data-aos="zoom-in" aria-hidden="true">
+          <div class="cube-scene">
+            <div class="wood-cube">
+              <div class="face f-front">؟</div>
+              <div class="face f-back">چوب</div>
+              <div class="face f-right"><i class="fa-solid fa-tree"></i></div>
+              <div class="face f-left"><i class="fa-solid fa-hammer"></i></div>
+              <div class="face f-top"></div>
+              <div class="face f-bottom"></div>
+            </div>
+            <div class="cube-shadow"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= HONORS + LOGOS ================= -->
+    <section id="honors-section" class="section section-alt">
+      <div class="container">
+        <div class="section-head" data-aos="fade-up">
+          <span class="section-en">Honors</span>
+          <h2 class="section-title">افتخارات ما</h2>
+        </div>
+        <div class="honors-grid">
+          <div class="honor-item" data-aos="flip-left"><div class="honor-icon"><i class="fa-solid fa-trophy"></i></div><h3>تندیس برترین برند صنایع دستی</h3><small>نمایشگاه صنایع دستی ۱۴۰۲</small></div>
+          <div class="honor-item" data-aos="flip-left" data-aos-delay="100"><div class="honor-icon"><i class="fa-solid fa-medal"></i></div><h3>نشان استاندارد ملی ایران</h3><small>سازمان ملی استاندارد</small></div>
+          <div class="honor-item" data-aos="flip-left" data-aos-delay="200"><div class="honor-icon"><i class="fa-solid fa-seedling"></i></div><h3>گواهی تولید سبز</h3><small>سازمان محیط زیست</small></div>
+          <div class="honor-item" data-aos="flip-left" data-aos-delay="300"><div class="honor-icon"><i class="fa-solid fa-award"></i></div><h3>جایزه طراحی داخلی</h3><small>جشنواره معماری ایران</small></div>
+        </div>
+        <div class="logo-marquee" aria-label="همکاران تجاری">
+          <div class="marquee-track">
+            <span><i class="fa-solid fa-mug-hot"></i> کافه چنار</span>
+            <span><i class="fa-solid fa-hotel"></i> هتل آرامش</span>
+            <span><i class="fa-solid fa-building"></i> برج‌سازان</span>
+            <span><i class="fa-solid fa-store"></i> خانه هنر</span>
+            <span><i class="fa-solid fa-utensils"></i> رستوران سرو</span>
+            <span><i class="fa-solid fa-couch"></i> مبل ایرانیان</span>
+            <span><i class="fa-solid fa-gem"></i> گالری نقش</span>
+            <span><i class="fa-solid fa-mug-hot"></i> کافه چنار</span>
+            <span><i class="fa-solid fa-hotel"></i> هتل آرامش</span>
+            <span><i class="fa-solid fa-building"></i> برج‌سازان</span>
+            <span><i class="fa-solid fa-store"></i> خانه هنر</span>
+            <span><i class="fa-solid fa-utensils"></i> رستوران سرو</span>
+            <span><i class="fa-solid fa-couch"></i> مبل ایرانیان</span>
+            <span><i class="fa-solid fa-gem"></i> گالری نقش</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= BLOG ================= -->
+    <section id="blog-section" class="section">
+      <div class="container">
+        <div class="section-head" data-aos="fade-up">
+          <span class="section-en">Blog</span>
+          <h2 class="section-title">مقالات ما</h2>
+        </div>
+      </div>
+      <div class="swiper blog-swiper" data-aos="fade-up">
+        <div class="swiper-wrapper">
+          <article class="swiper-slide blog-card">
+            <div class="blog-img" style="background-image:url('images/blog-1.jpg')"><span class="blog-cat">دکوراسیون</span></div>
+            <h3>۷ روش استفاده از چوب طبیعی در دکوراسیون خانه</h3><hr>
+            <p>چوب حس آرامش و گرما را به فضا می‌آورد؛ در این مقاله بهترین ایده‌ها را مرور می‌کنیم.</p>
+            <div class="blog-meta"><span><i class="fa-regular fa-calendar"></i> ۲ مهر ۱۴۰۵</span><a href="#blog-section">ادامه <i class="fa-solid fa-arrow-left"></i></a></div>
+          </article>
+          <article class="swiper-slide blog-card">
+            <div class="blog-img" style="background-image:url('images/blog-2.jpg')"><span class="blog-cat">راهنما</span></div>
+            <h3>چرا دکوری‌های دست‌ساز حس متفاوتی دارند؟</h3><hr>
+            <p>تفاوت محصولات دست‌ساز با تولید انبوه و دلایل ماندگاری آن‌ها در خانه‌های مدرن.</p>
+            <div class="blog-meta"><span><i class="fa-regular fa-calendar"></i> ۲۸ شهریور ۱۴۰۵</span><a href="#blog-section">ادامه <i class="fa-solid fa-arrow-left"></i></a></div>
+          </article>
+          <article class="swiper-slide blog-card">
+            <div class="blog-img" style="background-image:url('images/blog-3.jpg')"><span class="blog-cat">طراحی</span></div>
+            <h3>راهنمای انتخاب نوع چوب برای فضای داخلی</h3><hr>
+            <p>گردو، بلوط یا راش؟ ویژگی‌ها، رنگ و مقاومت هر نوع چوب را بشناسید.</p>
+            <div class="blog-meta"><span><i class="fa-regular fa-calendar"></i> ۲۰ شهریور ۱۴۰۵</span><a href="#blog-section">ادامه <i class="fa-solid fa-arrow-left"></i></a></div>
+          </article>
+          <article class="swiper-slide blog-card">
+            <div class="blog-img" style="background-image:url('images/blog-4.jpg')"><span class="blog-cat">آشپزخانه</span></div>
+            <h3>نگهداری صحیح از تخته و ظروف چوبی آشپزخانه</h3><hr>
+            <p>با چند نکته ساده عمر وسایل چوبی آشپزخانه خود را چند برابر کنید.</p>
+            <div class="blog-meta"><span><i class="fa-regular fa-calendar"></i> ۱۲ شهریور ۱۴۰۵</span><a href="#blog-section">ادامه <i class="fa-solid fa-arrow-left"></i></a></div>
+          </article>
+          <article class="swiper-slide blog-card">
+            <div class="blog-img" style="background-image:url('images/blog-5.jpg')"><span class="blog-cat">ترند</span></div>
+            <h3>ترندهای دکوراسیون چوبی در سال ۲۰۲۶</h3><hr>
+            <p>ترکیب چوب با رنگ‌های خاکی، فرم‌های ارگانیک و مینیمالیسم گرم.</p>
+            <div class="blog-meta"><span><i class="fa-regular fa-calendar"></i> ۵ شهریور ۱۴۰۵</span><a href="#blog-section">ادامه <i class="fa-solid fa-arrow-left"></i></a></div>
+          </article>
+        </div>
+      </div>
+      <div class="swiper-nav">
+        <button class="swiper-btn blog-next" aria-label="بعدی"><i class="fa-solid fa-arrow-right"></i></button>
+        <button class="swiper-btn blog-prev" aria-label="قبلی"><i class="fa-solid fa-arrow-left"></i></button>
+      </div>
+    </section>
+
+    <!-- ================= CONTACT / NEWSLETTER ================= -->
+    <section id="contact-section" class="section">
+      <div class="container">
+        <div class="contact-box" data-aos="fade-up">
+          <div class="contact-text">
+            <span class="section-en">Contact</span>
+            <h2>برای سفارش یا مشاوره رایگان، شماره‌تان را بگذارید</h2>
+            <p>کارشناسان ما کمتر از ۲ ساعت کاری با شما تماس می‌گیرند.</p>
+          </div>
+          <form class="contact-form" id="contact-form">
+            <input type="text" id="contact-name" placeholder="نام و نام خانوادگی" required>
+            <input type="tel" id="contact-phone" placeholder="شماره موبایل" required pattern="[0-9۰-۹]{10,11}">
+            <button type="submit" class="btn btn-light">ارسال درخواست <span class="btn-arrow"><i class="fa-solid fa-paper-plane"></i></span></button>
+          </form>
+          <i class="fa-solid fa-tree contact-deco"></i>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer id="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-about">
+        <a href="#hero-section" class="site-logo"><span class="logo-mark"><i class="fa-solid fa-tree"></i></span><span class="logo-text"><strong>چوبینه</strong><small>Choobineh Decor</small></span></a>
+        <p>تولیدکننده لوازم دکوری و چوبی دست‌ساز با بیش از ۱۵ سال تجربه. هنر سنتی، طراحی مدرن.</p>
+        <div class="socials">
+          <a href="#" aria-label="اینستاگرام"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" aria-label="تلگرام"><i class="fa-brands fa-telegram"></i></a>
+          <a href="#" aria-label="واتساپ"><i class="fa-brands fa-whatsapp"></i></a>
+          <a href="#" aria-label="پینترست"><i class="fa-brands fa-pinterest"></i></a>
+        </div>
+      </div>
+      <div>
+        <h4>دسترسی سریع</h4>
+        <ul><li><a href="#products-section">محصولات</a></li><li><a href="#services-section">خدمات</a></li><li><a href="#projects-section">نمونه‌کارها</a></li><li><a href="#blog-section">مجله</a></li></ul>
+      </div>
+      <div>
+        <h4>دسته‌بندی‌ها</h4>
+        <ul><li><a href="#products-section">ساعت دیواری</a></li><li><a href="#products-section">ظروف چوبی</a></li><li><a href="#products-section">شلف و طاقچه</a></li><li><a href="#products-section">جاشمعی</a></li></ul>
+      </div>
+      <div>
+        <h4>ارتباط با ما</h4>
+        <ul class="footer-contact">
+          <li><i class="fa-solid fa-location-dot"></i> تهران، خیابان ولیعصر، کوچه چنار، پلاک ۱۲</li>
+          <li><i class="fa-solid fa-phone"></i> ۰۲۱-۱۲۳۴۵۶۷۸</li>
+          <li><i class="fa-solid fa-envelope"></i> info@choobineh.ir</li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>© ۱۴۰۵ تمامی حقوق برای <strong>چوبینه</strong> محفوظ است.</p>
+      <div class="trust-badges"><span><i class="fa-solid fa-shield-halved"></i> نماد اعتماد</span><span><i class="fa-solid fa-truck"></i> ارسال سراسری</span></div>
+    </div>
+  </footer>
+
+  <!-- Mobile bottom nav -->
+  <nav id="mobile-bottom-menu" aria-label="منوی پایین موبایل">
+    <a href="#hero-section" class="active"><i class="fa-solid fa-house"></i><span>خانه</span></a>
+    <a href="#products-section"><i class="fa-solid fa-grip"></i><span>محصولات</span></a>
+    <a href="pages/projects.html"><i class="fa-solid fa-couch"></i><span>پروژه‌ها</span></a>
+    <a href="pages/contact.html"><i class="fa-solid fa-headset"></i><span>تماس</span></a>
+  </nav>
+
+  <!-- Back to top -->
+  <button id="back-to-top" aria-label="بازگشت به بالا"><svg viewBox="0 0 44 44"><circle cx="22" cy="22" r="20"></circle></svg><i class="fa-solid fa-arrow-up"></i></button>
+
+  <!-- Workshop tour modal -->
+  <div id="tour-modal" role="dialog" aria-modal="true" aria-label="تور تصویری کارگاه">
+    <button class="icon-btn modal-close" id="tour-close" aria-label="بستن"><i class="fa-solid fa-xmark"></i></button>
+    <div class="tour-stage" id="tour-stage"></div>
+    <p class="tour-caption" id="tour-caption"></p>
+  </div>
+
+  <!-- Toast -->
+  <div id="toast" role="status"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/three@0.149.0/build/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.8.1/dist/vanilla-tilt.min.js"></script>
+  <script src="js/hero3d.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
