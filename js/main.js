@@ -174,17 +174,12 @@
     renderProducts(b.dataset.filter);
   }));
 
-  let cart = +(localStorage.getItem('choob_cart') || 0);
-  const cartCount = $('#cart-count');
-  cartCount.textContent = faDigits(cart);
   wrap.addEventListener('click', (e) => {
     const card = e.target.closest('.product-card');
     if (!card) return;
     const p = products[+card.dataset.idx];
     if (e.target.closest('.add-cart')) {
-      cart++; localStorage.setItem('choob_cart', cart);
-      cartCount.textContent = faDigits(cart);
-      cartCount.classList.remove('bump'); void cartCount.offsetWidth; cartCount.classList.add('bump');
+      window.Cart.add({ id: card.dataset.idx, name: p.name, img: p.img, price: p.price });
       toast('«' + p.name + '» به سبد خرید اضافه شد');
     } else if (e.target.closest('.like-btn')) {
       const btn = e.target.closest('.like-btn');
@@ -195,7 +190,6 @@
       openTour([{ src: p.img, cap: p.name + ' — ' + faPrice(p.price) + ' تومان' }]);
     }
   });
-  $('#cart-button').addEventListener('click', () => toast(cart ? faDigits(cart) + ' کالا در سبد خرید شماست' : 'سبد خرید شما خالی است'));
 
   /* ---------- Testimonials & Blog ---------- */
   new Swiper('.testimonials-swiper', {

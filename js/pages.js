@@ -79,14 +79,8 @@
     });
   });
 
-  /* ---------- Cart (shared with homepage via localStorage) ---------- */
-  const cartCount = $('#cart-count');
-  let cart = +(localStorage.getItem('choob_cart') || 0);
-  if (cartCount) cartCount.textContent = faDigits(cart);
-  const cartBtn = $('#cart-button');
-  if (cartBtn) {
-    cartBtn.addEventListener('click', () => toast(cart ? faDigits(cart) + ' کالا در سبد خرید شماست' : 'سبد خرید شما خالی است'));
-  }
+  /* ---------- Cart (managed by js/cart.js) ---------- */
+  /* دکمه سبد و بجِ شمارنده توسط cart.js متصل می‌شوند؛ اینجا فقط همگام‌سازی اولیه. */
 
   /* ---------- Header search (redirect to homepage products) ---------- */
   const searchForm = $('.header-search');
